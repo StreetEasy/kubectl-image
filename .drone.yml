@@ -16,7 +16,7 @@ steps:
     build_args:
     - KUBECTL_VERSION=v1.16.9
     - AWS_CLI_VERSION=1.18.54
-    targs:
+    tags:
     - latest
     - "1.16.9"
     - "1.16"
