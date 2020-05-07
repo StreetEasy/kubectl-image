@@ -3,13 +3,13 @@
 FROM golang:1.14.2 AS build
 
 ARG KUBECTL_REPO
-ARG KUBECTL_COMMIT
+ARG KUBECTL_VERSION
 
 RUN apt-get update && apt-get install -y rsync
 
 RUN git clone ${KUBECTL_REPO} /go/src/k8s.io/kubernetes \
   && cd /go/src/k8s.io/kubernetes \
-  && git checkout ${KUBECTL_COMMIT}
+  && git checkout ${KUBECTL_VERSION}
 
 WORKDIR /go/src/k8s.io/kubernetes
 
