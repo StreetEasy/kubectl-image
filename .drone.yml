@@ -14,7 +14,6 @@ steps:
       from_secret: docker_password
     repo: zillownyc/kubectl
     build_args:
-    - KUBECTL_REPO=https://github.com/kubernetes/kubernetes
     - KUBECTL_VERSION=v1.16.9
     - AWS_CLI_VERSION=1.18.54
     targs:
