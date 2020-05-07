@@ -1,0 +1,29 @@
+kind: pipeline
+name: images
+type: kubernetes
+
+steps:
+- name: build
+  image: plugins/docker
+  environment:
+  settings:
+    purge: false
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+    repo: zillownyc/kubectl
+    build_args:
+    - KUBECTL_REPO=https://github.com/kubernetes/kubernetes
+    - KUBECTL_VERSION=v1.16.9
+    - AWS_CLI_VERSION=1.18.54
+    targs:
+    - latest
+    - "1.16.9"
+    - "1.16"
+
+trigger:
+  event:
+  - push
+  branch:
+  - master
