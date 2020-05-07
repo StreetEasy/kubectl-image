@@ -6,5 +6,5 @@ docker build \
   --build-arg AWS_CLI_VERSION=1.18.54 \
   -t zillownyc/kubectl:1.16.9 \
   -t zillownyc/kubectl:1.16 \
-  -t latest .
+  -t zillownyc/kubectl:latest .
 ```
