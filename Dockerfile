@@ -31,6 +31,7 @@ RUN apk --no-cache update && \
   ca-certificates \
   curl \
   groff \
+  jq \
   less \
   py-pip \
   python \
