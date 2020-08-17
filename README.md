@@ -2,9 +2,9 @@
 
 ```
 docker build \
-  --build-arg KUBECTL_VERSION=v1.16.9 \
+  --build-arg KUBECTL_VERSION=v1.17.6 \
   --build-arg AWS_CLI_VERSION=1.18.54 \
-  -t zillownyc/kubectl:1.16.9 \
-  -t zillownyc/kubectl:1.16 \
+  -t zillownyc/kubectl:1.17.6 \
+  -t zillownyc/kubectl:1.17 \
   -t zillownyc/kubectl:latest .
 ```
