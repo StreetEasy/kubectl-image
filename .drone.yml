@@ -14,12 +14,12 @@ steps:
       from_secret: docker_password
     repo: zillownyc/kubectl
     build_args:
-    - KUBECTL_VERSION=v1.17.6
+    - KUBECTL_VERSION=v1.18.16
     - AWS_CLI_VERSION=1.18.54
     tags:
     - latest
-    - "1.17.6"
-    - "1.17"
+    - "1.18.16"
+    - "1.18"
 
 trigger:
   event:
